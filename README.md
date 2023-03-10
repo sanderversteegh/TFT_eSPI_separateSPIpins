@@ -1,4 +1,46 @@
+# Read this!!
+This is a copy of the great work of the github.com/Bodmer/TFT_eSPI library (v2.4.70). The only thing I changed is adding a option to use different MOSI, MISO and CLK pins for the touchscreen and the TFT. This because of a premade ESP32 2.8inch module I bought (https://a.aliexpress.com/_vP7LsJ) that had the touch screen data lines connected to different pins then those of the TFT screen and the library does not support that. 
+
+How to use: In the file “User_Setup.h” there are a few extra #define’s, the names will speak for them self:
+(line 209)
+
+#define TFT_MOSI 13 // In some display driver board, it might be written as "SDA" and so on.
+
+#define TFT_MISO 12
+
+#define TFT_SCLK 14
+
+#define TFT_CS   15  // Chip select control pin
+
+#define TFT_DC   2  // Data Command control pin
+
+#define TFT_RST  12  // Reset pin (could connect to Arduino RESET pin)
+
+#define TFT_BL   21  // LED back-light
+
+
+#define TOUCH_MOSI 32 // In some display driver board, it might be written as "SDA" and so on.
+
+#define TOUCH_MISO 39
+
+#define TOUCH_SCLK 25
+
+#define TOUCH_CS 33     // Chip select pin (T_CS) of touch screen
+
+------------
+
+Is you want to disable this extra capability you can command this line:
+(line 347) 
+
+#define USE_SEPERATE_TOUCH_BUS
+
+
+Use the library as intended described as in the original guides.
+
+-------------
+
 A ["Discussions"](https://github.com/Bodmer/TFT_eSPI/discussions) facility has been added for Q&A etc. Use the ["Issues"](https://github.com/Bodmer/TFT_eSPI/issues) tab only for problems with the library. Thanks!
+
 # News
 1. Support has been added in v2.4.70 for the RP2040 with 16 bit parallel displays. This has been tested and the screen update performance is very good (4ms to clear 320 x 480 screen with HC8357C). The use of the RP2040 PIO makes it easy to change the write cycle timing for different displays. DMA with 16 bit transfers is also supported.
 
