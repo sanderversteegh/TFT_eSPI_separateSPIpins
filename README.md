@@ -1,7 +1,7 @@
 # Read this!!
 This is a copy of the great work of the https://github.com/Bodmer/TFT_eSPI library (v2.4.70). The only thing I changed is adding a option to use different MOSI, MISO and CLK pins for the touchscreen and the TFT. This because of a premade ESP32 2.8inch module I bought (https://a.aliexpress.com/_vP7LsJ) that had the touch screen data lines connected to different pins then those of the TFT screen and the library does not support that. 
 Result of the forum post: https://forum.arduino.cc/t/esp32-switching-multiple-miso-mosi-pins/1023800
-
+--
 How to use: In the file “User_Setup.h” there are a few extra #define’s, the names will speak for them self:
 (line 209)
 
@@ -28,7 +28,7 @@ How to use: In the file “User_Setup.h” there are a few extra #define’s, th
 
 #define TOUCH_CS 33     // Chip select pin (T_CS) of touch screen
 
-------------
+--
 
 Is you want to disable this extra capability you can command this line:
 (line 347) 
