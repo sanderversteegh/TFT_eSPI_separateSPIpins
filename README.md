@@ -5,28 +5,28 @@ Result of the forum post: https://forum.arduino.cc/t/esp32-switching-multiple-mi
 How to use: In the file “User_Setup.h” there are a few extra #define’s, the names will speak for them self:
 (line 209)
 
-#define TFT_MOSI 13 // In some display driver board, it might be written as "SDA" and so on.
+#define TFT_MOSI 13
 
 #define TFT_MISO 12
 
 #define TFT_SCLK 14
 
-#define TFT_CS   15  // Chip select control pin
+#define TFT_CS   15
 
-#define TFT_DC   2  // Data Command control pin
+#define TFT_DC   2 
 
-#define TFT_RST  12  // Reset pin (could connect to Arduino RESET pin)
+#define TFT_RST  12
 
-#define TFT_BL   21  // LED back-light
+#define TFT_BL   21
 
 
-#define TOUCH_MOSI 32 // In some display driver board, it might be written as "SDA" and so on.
+#define TOUCH_MOSI 32
 
 #define TOUCH_MISO 39
 
 #define TOUCH_SCLK 25
 
-#define TOUCH_CS 33     // Chip select pin (T_CS) of touch screen
+#define TOUCH_CS 33
 
 --
 
